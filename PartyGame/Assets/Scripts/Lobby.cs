@@ -3,23 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
-public class LevelSelect : MonoBehaviour {
+
+public class Lobby : MonoBehaviour {
+
+    public Slider roundSlider;
+    public TextMeshProUGUI roundsText;
 
 	// Use this for initialization
 	void Start () {
-        
-    }
+
+        roundsText.text = "Rounds: 1";
+	}
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
 
-    public void PlayLevel(string level)
-    {
-        SceneManager.LoadScene(level);
-    }
+        roundsText.text = "Rounds: " + roundSlider.value;
+      
+	}
 
     public void Back()
     {

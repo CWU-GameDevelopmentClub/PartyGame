@@ -22,6 +22,11 @@ public class Menu : MonoBehaviour {
         
     public void Play()
     {
+        SceneManager.LoadScene("Lobby");
+    }
+
+    public void LevelSelect()
+    {
         SceneManager.LoadScene("LevelSelect");
     }
    
