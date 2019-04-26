@@ -5,7 +5,7 @@ using UnityEngine;
 public class AsteroidPlayer : MonoBehaviour {
 
     private Rigidbody2D rb;
-    public KeyCode left, right, forward, back, shoot;
+    public KeyCode left, right, forward, back;
     public float speed;
     private Vector2 direction;
     public Transform booster;
