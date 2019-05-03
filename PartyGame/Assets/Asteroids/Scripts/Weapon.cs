@@ -58,7 +58,8 @@ public class Weapon : MonoBehaviour {
         {
             Debug.Log("HITTT!!");
             Debug.DrawLine(myPostition, hit.point, Color.red);
-            
+
+            hit.transform.SendMessage("HitByRay");
         }
     }
 

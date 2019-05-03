@@ -6,6 +6,7 @@ public class AsteroidPlayer : MonoBehaviour {
 
     private Rigidbody2D rb;
     public KeyCode left, right, forward, back;
+    public bool keyboardControls = false;
     public float speed;
     private Vector2 direction;
     public Transform booster;
@@ -17,6 +18,14 @@ public class AsteroidPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (keyboardControls)
+        {
+            left = KeyCode.A;
+            right = KeyCode.D;
+            forward = KeyCode.W;
+            back = KeyCode.S;
+        }
 
         if (Input.GetKey(left))
         {
