@@ -28,6 +28,7 @@ public class Weapon : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
         if (fireRate == 0)
         {
             if (Input.GetKeyDown(fire))
@@ -51,7 +52,7 @@ public class Weapon : MonoBehaviour {
         Vector2 firePointPosition = new Vector2(firePoint.position.x, firePoint.position.y);
         RaycastHit2D hit = Physics2D.Raycast(firePointPosition, firePointPosition - myPostition, 100, whatToHit);
         
-        //Debug.DrawLine(firePointPosition, (firePointPosition - myPostition) * 100, Color.cyan);
+
         Effect();
 
         if(hit.collider != null)

@@ -11,14 +11,21 @@ public class AsteroidPlayer : MonoBehaviour {
     private Vector2 direction;
     public Transform booster;
 
+
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
 
+    private void FixedUpdate()
+    {
+        Wrapper.Wrap(this.transform);
+    }
+
+    // Update is called once per frame
+    void Update () {
+
+       
         if (keyboardControls)
         {
             left = KeyCode.A;
@@ -43,10 +50,12 @@ public class AsteroidPlayer : MonoBehaviour {
         if (Input.GetKey(forward))
         {
             rb.AddForce(direction*speed*4);
-        }
+        }   
         if (Input.GetKey(back))
         {
             rb.AddForce(-direction * speed * 4);
         }
+
 	}
+
 }
