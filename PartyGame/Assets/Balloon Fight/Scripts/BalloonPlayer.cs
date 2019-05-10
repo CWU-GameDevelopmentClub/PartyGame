@@ -6,7 +6,7 @@ public class BalloonPlayer : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float speed, jumpForce;
-    public KeyCode left, right, jump;
+    public KeyCode left, right, down, jump;
     [Range(0f,1f)]
     public float rate;
     private float timer;
@@ -20,6 +20,8 @@ public class BalloonPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+
         if (Input.GetKey(left))
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
@@ -28,17 +30,27 @@ public class BalloonPlayer : MonoBehaviour
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
         }
+        else if (Input.GetKey(down) && (timer > rate))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, -jumpForce);
+            timer = 0;
+        }
+        else if (Input.GetKey(jump) && (timer > rate))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            timer = 0;
+        }
         else
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
+    }
 
-        timer += Time.deltaTime;
-
-        if (Input.GetKey(jump) && (timer > rate))
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            timer = 0;
+            Destroy(gameObject);
         }
     }
 }
