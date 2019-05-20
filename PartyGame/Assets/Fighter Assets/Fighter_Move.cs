@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Fighter_Move : StateMachineBehaviour
 {
+  public float speed;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -12,7 +14,7 @@ public class Fighter_Move : StateMachineBehaviour
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
   override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-    animator.transform.position += animator.transform.forward * 2 * Time.deltaTime;
+    animator.transform.position += animator.transform.forward * speed * Time.deltaTime;
   }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
