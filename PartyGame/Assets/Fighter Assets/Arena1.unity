@@ -524,14 +524,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73a683c602cbaf24dadc6355e1c2d281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hControl: 
-  vControl: 
-  Attack: 
-  Jump: 
-  Defend: 
-  speed: 0
-  anim: {fileID: 0}
+  hControl: P1_Horizontal
+  vControl: P1_Vertical
+  Attack: U
+  Jump: I
+  Defend: O
+  speed: 2
+  anim: {fileID: 1808358454}
   charge: 0
+--- !u!95 &1808358454 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 32c49c73027ed964bb54e734ef6d73c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 631186415}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1437916204304975132
 PrefabInstance:
   m_ObjectHideFlags: 0
