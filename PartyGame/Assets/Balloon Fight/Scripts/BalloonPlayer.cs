@@ -9,7 +9,10 @@ public class BalloonPlayer : MonoBehaviour
     public KeyCode left, right, down, jump;
     [Range(0f,1f)]
     public float rate;
+    public float iRate;
+    private float iTimer = 5f;
     private float timer;
+    private int health = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +24,7 @@ public class BalloonPlayer : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        iTimer += Time.deltaTime;
 
         if (Input.GetKey(left))
         {
@@ -35,14 +39,15 @@ public class BalloonPlayer : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, -jumpForce);
             timer = 0;
         }
-        else if (Input.GetKey(jump) && (timer > rate))
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            timer = 0;
-        }
         else
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+
+        if (Input.GetKey(jump) && (timer > rate))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            timer = 0;
         }
     }
 
@@ -50,7 +55,16 @@ public class BalloonPlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            if (iTimer > iRate)
+            {
+                health--;
+                iTimer = 0;
+            }
+
+            if (health == 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

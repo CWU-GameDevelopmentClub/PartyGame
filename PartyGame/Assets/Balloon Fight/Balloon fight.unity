@@ -475,7 +475,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.9999313
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -596,6 +596,11 @@ PrefabInstance:
         type: 3}
       propertyPath: jump
       value: 330
+      objectReference: {fileID: 0}
+    - target: {fileID: 8898324952682051592, guid: 01b34a08262daa64b8363196446c51a1,
+        type: 3}
+      propertyPath: iRate
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4434911925964427297, guid: 01b34a08262daa64b8363196446c51a1, type: 3}
@@ -749,7 +754,7 @@ PrefabInstance:
     - target: {fileID: 8898324952682051588, guid: 01b34a08262daa64b8363196446c51a1,
         type: 3}
       propertyPath: m_Name
-      value: BaloonPlayer
+      value: BaloonPlayer 1
       objectReference: {fileID: 0}
     - target: {fileID: 8898324952682051591, guid: 01b34a08262daa64b8363196446c51a1,
         type: 3}
@@ -825,6 +830,11 @@ PrefabInstance:
         type: 3}
       propertyPath: down
       value: 274
+      objectReference: {fileID: 0}
+    - target: {fileID: 8898324952682051592, guid: 01b34a08262daa64b8363196446c51a1,
+        type: 3}
+      propertyPath: iRate
+      value: 2.03
       objectReference: {fileID: 0}
     - target: {fileID: 4415872666067195229, guid: 01b34a08262daa64b8363196446c51a1,
         type: 3}
