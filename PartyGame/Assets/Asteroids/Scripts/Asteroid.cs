@@ -6,7 +6,7 @@ public class Asteroid : MonoBehaviour
 {
 
     private Rigidbody2D rb;
-    private float speed = 3;
+    public float speed = 3, life = 5;
     private ParticleSystem particleSystem;
     private SpriteRenderer sprite;
 
@@ -34,6 +34,7 @@ public class Asteroid : MonoBehaviour
     public void Move()
     {
         rb.velocity = new Vector2(1, 1) * Random.Range(-1, 3) * speed;
+        Destroy(this.gameObject, life);
     }
 
     public void HitByRay()

@@ -17,6 +17,8 @@ public class Weapon : MonoBehaviour {
     private float timeToFire = 0;
     private Transform firePoint;
 
+    private int score;
+
 	// Use this for initialization (use awake if not working)
 	void Start () {
         firePoint = this.transform.Find("FirePoint");
@@ -24,6 +26,8 @@ public class Weapon : MonoBehaviour {
         {
             Debug.LogError("No FirePoint! Check yo self!");
         }
+
+        score = 0;
 	}
 
     // Update is called once per frame
@@ -61,11 +65,17 @@ public class Weapon : MonoBehaviour {
             Debug.DrawLine(myPostition, hit.point, Color.red);
 
             hit.transform.SendMessage("HitByRay");
+            score++;
         }
     }
 
     public void Effect()
     {
         Instantiate(bulletTrailPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    public int getScore()
+    {
+        return score;
     }
 }
