@@ -23,7 +23,7 @@ public class RoundTimer : MonoBehaviour {
         if(roundTime <= 0)
         {
             timerText.text = "END GAME";
-           // SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("Menu");
 
         }
 	}
