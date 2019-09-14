@@ -24,6 +24,11 @@ public class Lobby : MonoBehaviour {
       
 	}
 
+    public void Play()
+    {
+        SceneManager.LoadScene("AsteroidGame");
+    }
+
     public void Back()
     {
         SceneManager.LoadScene("Menu");
