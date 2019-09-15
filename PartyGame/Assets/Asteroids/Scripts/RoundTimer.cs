@@ -12,7 +12,7 @@ public class RoundTimer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         timerText = GetComponent<TextMeshProUGUI>();    
-        timerText.text = "Timer: "; 
+        timerText.text = "Timer: ";     
 	}
 	
 	// Update is called once per frame
@@ -23,7 +23,7 @@ public class RoundTimer : MonoBehaviour {
         if(roundTime <= 0)
         {
             timerText.text = "END GAME";
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("ScoreLobby");
 
         }
 	}
