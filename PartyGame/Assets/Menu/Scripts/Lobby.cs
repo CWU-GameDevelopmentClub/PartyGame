@@ -21,7 +21,7 @@ public class Lobby : MonoBehaviour {
 	void Update () {
 
         roundsText.text = "Rounds: " + roundSlider.value;
-      
+        GameObject.Find("RoundManager").GetComponent<RoundManager>().SetRounds(roundSlider.value);
 	}
 
     public void Play()
@@ -33,4 +33,5 @@ public class Lobby : MonoBehaviour {
     {
         SceneManager.LoadScene("Menu");
     }
+
 }
