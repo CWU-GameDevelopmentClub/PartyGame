@@ -5,6 +5,7 @@ using UnityEngine;
 public class BalloonPlayer : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private ParticleSystem pr;
     public float speed, jumpForce;
     public KeyCode left, right, down, jump;
     [Range(0f,1f)]
@@ -18,6 +19,7 @@ public class BalloonPlayer : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        pr = GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -58,6 +60,7 @@ public class BalloonPlayer : MonoBehaviour
             if (iTimer > iRate)
             {
                 health--;
+                pr.Play();
                 iTimer = 0;
             }
 
