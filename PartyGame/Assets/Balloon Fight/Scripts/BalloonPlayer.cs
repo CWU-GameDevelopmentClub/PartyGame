@@ -66,6 +66,7 @@ public class BalloonPlayer : MonoBehaviour
 
             if (health == 0)
             {
+                pr.Play();
                 Destroy(gameObject);
             }
         }
