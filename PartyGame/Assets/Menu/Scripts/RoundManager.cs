@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class RoundManager : MonoBehaviour
 {
-    private Winner winner;
-    private Lobby lobby;
     private int rounds;
 
     // Start is called before the first frame update
@@ -19,17 +17,6 @@ public class RoundManager : MonoBehaviour
     void Update()
     {
 
-
-        if (!SceneManager.GetActiveScene().name.Contains("Lobby"))
-        {
-            if(winner == null)
-            {
-                winner = GameObject.Find("Winner").GetComponent<Winner>();
-                Debug.Log("winner has been activated my dude");
-            }
-
-            Debug.Log("WINNER!! " + winner.GetWinner());
-        }
 
         Debug.Log("ROUNDS: " + rounds);
 
@@ -52,8 +39,4 @@ public class RoundManager : MonoBehaviour
         return rounds;
     }
 
-    public string GetWinner()
-    {
-        return winner.GetWinner();
-    }
 }
