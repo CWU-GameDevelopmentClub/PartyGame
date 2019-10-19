@@ -14,7 +14,7 @@ public class BalloonPlayer : MonoBehaviour
     public float iRate;
     private float iTimer = 5f;
     private float timer;
-    private int health = 3;
+    public int health = 3;
     public Sprite[] sprites;
     
 
@@ -58,7 +58,8 @@ public class BalloonPlayer : MonoBehaviour
 
         if (!ad.isPlaying && health == 0)
         {
-            Destroy(gameObject);
+            this.gameObject.active = false;
+            //Destroy(gameObject);
         }
     }
 
