@@ -18,7 +18,6 @@ public class ScoreLobby : MonoBehaviour
     void Start()
     {
         roundManager = GameObject.Find("RoundManager").GetComponent<RoundManager>();
-        roundManager.DecrementRounds();
 
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
         scoreKeeper.UpdateScores();
@@ -36,14 +35,7 @@ public class ScoreLobby : MonoBehaviour
 
     public void NextRound()
     {
-        if(roundManager.GetRounds() > 0)
-        {
-            SceneManager.LoadScene("AsteroidGame");
-        }
-        else
-        {
-            SceneManager.LoadScene("WinLobby");
-        }
+        roundManager.NextRound();
                 
     }
 }

@@ -10,23 +10,25 @@ public class Lobby : MonoBehaviour {
 
     public Slider roundSlider;
     public TextMeshProUGUI roundsText;
+    private RoundManager roundManager;
 
 	// Use this for initialization
 	void Start () {
 
         roundsText.text = "Rounds: 1";
+        roundManager = GameObject.Find("RoundManager").GetComponent<RoundManager>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
         roundsText.text = "Rounds: " + roundSlider.value;
-        GameObject.Find("RoundManager").GetComponent<RoundManager>().SetRounds(roundSlider.value);
+        roundManager.SetRounds(roundSlider.value);
 	}
 
     public void Play()
     {
-        SceneManager.LoadScene("AsteroidGame");
+        roundManager.NextRound();
     }
 
     public void Back()

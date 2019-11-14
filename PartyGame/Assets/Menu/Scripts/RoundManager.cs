@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class RoundManager : MonoBehaviour
 {
     private int rounds;
+    public string[] scenes;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,23 @@ public class RoundManager : MonoBehaviour
         
     }
 
-    public void DecrementRounds()
+    public void NextRound()
+    {
+       
+        if (rounds > 0)
+        {
+            DecrementRounds();
+            int randNum = Random.Range(0, scenes.Length);
+            SceneManager.LoadScene(scenes[randNum]);
+        }
+        else
+        {
+            SceneManager.LoadScene("WinLobby");
+        }
+      
+    }
+
+    private void DecrementRounds()
     {
         rounds--;
     }

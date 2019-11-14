@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wrapper : MonoBehaviour
+public class BF_Wrapper : MonoBehaviour
 {
     private Camera cam;
     private static float screenWidth, screenHeight;

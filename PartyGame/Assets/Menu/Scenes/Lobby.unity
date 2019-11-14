@@ -1535,6 +1535,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1279428644706787943, guid: 580d4a57b22c4af42a14c0cc2edcb529,
+        type: 3}
+      propertyPath: scenes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279428644706787943, guid: 580d4a57b22c4af42a14c0cc2edcb529,
+        type: 3}
+      propertyPath: scenes.Array.data[0]
+      value: AsteroidGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279428644706787943, guid: 580d4a57b22c4af42a14c0cc2edcb529,
+        type: 3}
+      propertyPath: scenes.Array.data[1]
+      value: Balloon fight
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 580d4a57b22c4af42a14c0cc2edcb529, type: 3}
 --- !u!1001 &8943970020646973839
