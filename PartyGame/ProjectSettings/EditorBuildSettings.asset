@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Menu/Scenes/WinLobby.unity
     guid: fb97ec59ea608004493a390473c935e3
+  - enabled: 1
+    path: Assets/Balloon Fight/Balloon fight.unity
+    guid: a3d29df211c446a459be554f9bd94eb6
   m_configObjects: {}

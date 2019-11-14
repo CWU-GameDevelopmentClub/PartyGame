@@ -28,7 +28,7 @@ public class RoundManager : MonoBehaviour
     public void NextRound()
     {
        
-        if (rounds > 0)
+        if (rounds > 1)
         {
             DecrementRounds();
             int randNum = Random.Range(0, scenes.Length);
