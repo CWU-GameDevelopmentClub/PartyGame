@@ -23,4 +23,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Menu/Scenes/Lobby.unity
     guid: e6cb763cbe5c0bc40819143f8702ecaf
+  - enabled: 1
+    path: Assets/Asteroids/AsteroidGame.unity
+    guid: 09fc8f55851dba940adbef55d1ded32f
+  - enabled: 1
+    path: Assets/Menu/Scenes/ScoreLobby.unity
+    guid: 8306265b01e1afa4c807c21c02ee9849
+  - enabled: 1
+    path: Assets/Menu/Scenes/WinLobby.unity
+    guid: fb97ec59ea608004493a390473c935e3
+  - enabled: 1
+    path: Assets/Balloon Fight/Balloon fight.unity
+    guid: a3d29df211c446a459be554f9bd94eb6
   m_configObjects: {}
