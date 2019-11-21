@@ -26,6 +26,11 @@ public class BalloonPlayer : MonoBehaviour
         ad = GetComponent<AudioSource>();
     }
 
+    private void FixedUpdate()
+    {
+        BalloonWrapper.Wrap(this.transform);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -59,7 +64,6 @@ public class BalloonPlayer : MonoBehaviour
         if (!ad.isPlaying && health == 0)
         {
             this.gameObject.active = false;
-            //Destroy(gameObject);
         }
     }
 
@@ -67,9 +71,15 @@ public class BalloonPlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            GameObject otherPlayer = collision.gameObject;
+            otherPlayer.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            otherPlayer.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce * 75));
+
             if (iTimer > iRate)
             {
                 health--;
+                rb.velocity = Vector2.zero;
+                rb.AddForce(new Vector2(0, jumpForce * -75));
                 ad.Play();
                 pr.Play();
                 iTimer = 0;

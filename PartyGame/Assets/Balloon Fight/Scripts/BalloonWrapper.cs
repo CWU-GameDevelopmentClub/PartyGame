@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wrapper : MonoBehaviour
+public class BalloonWrapper : MonoBehaviour
 {
     private Camera cam;
     private static float screenWidth, screenHeight;
-    private static float offset = 0.90f;
+    private static float offset = 0.9f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class Wrapper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public static void Wrap(Transform t)
