@@ -28,6 +28,7 @@ public class Lobby : MonoBehaviour {
 
     public void Play()
     {
+        roundManager.SetTotalRounds((int) roundSlider.value);
         roundManager.NextRound();
     }
 

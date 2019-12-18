@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class RoundManager : MonoBehaviour
 {
-    private int rounds;
+    private int rounds, totalRounds;
     public string[] scenes;
-
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +54,16 @@ public class RoundManager : MonoBehaviour
     public int GetRounds()
     {
         return rounds;
+    }
+
+    public void SetTotalRounds(int rounds)
+    {
+        totalRounds = rounds;
+    }
+
+    public int GetTotalRounds()
+    {
+        return totalRounds;
     }
 
 }
