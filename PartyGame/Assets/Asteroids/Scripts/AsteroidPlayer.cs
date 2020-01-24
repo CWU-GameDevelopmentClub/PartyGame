@@ -12,11 +12,13 @@ public class AsteroidPlayer : MonoBehaviour {
     private Vector2 direction;
     public Transform booster;
 
-
+    private ParticleSystem particleSystem;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
+        particleSystem = GetComponentInChildren<ParticleSystem>();
+        particleSystem.Stop();
 	}
 
     private void FixedUpdate()
@@ -51,6 +53,11 @@ public class AsteroidPlayer : MonoBehaviour {
         if (Input.GetKey(forward))
         {
             rb.AddForce(direction*speed*4);
+            particleSystem.Play();
+        }
+        else
+        {
+            particleSystem.Stop();
         }   
         if (Input.GetKey(back))
         {
