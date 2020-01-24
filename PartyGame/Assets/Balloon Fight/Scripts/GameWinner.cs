@@ -25,12 +25,12 @@ public class GameWinner : MonoBehaviour
         health1 = p1.GetComponent<BalloonPlayer>().health;
         health2 = p2.GetComponent<BalloonPlayer>().health;
 
-        if (health1 == 0)
+        if (health1 == 0 && !p1.GetComponent<BalloonPlayer>().ad.isPlaying)
         {
             winner = 2;
             winnerText.text = "Player 2 Wins";
         }
-        else if (health2 == 0)
+        else if (health2 == 0 && !p2.GetComponent<BalloonPlayer>().ad.isPlaying)
         {
             winner = 1;
             winnerText.text = "Player 1 Wins";

@@ -6,7 +6,7 @@ public class BalloonPlayer : MonoBehaviour
 {
     private Rigidbody2D rb;
     private ParticleSystem pr;
-    private AudioSource ad;
+    public AudioSource ad;
     public float speed, jumpForce;
     public KeyCode left, right, down, jump;
     [Range(0f,1f)]

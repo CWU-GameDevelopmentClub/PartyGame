@@ -486,6 +486,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: c77e42559fbd74f408c93c9e2850c599,
         type: 3}
+    - target: {fileID: 3625486699767509658, guid: 32f78d152820b654582ed7018db4be7d,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32f78d152820b654582ed7018db4be7d, type: 3}
 --- !u!4 &649767333 stripped
@@ -1655,6 +1660,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FlipY
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625486699767509658, guid: 32f78d152820b654582ed7018db4be7d,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32f78d152820b654582ed7018db4be7d, type: 3}
